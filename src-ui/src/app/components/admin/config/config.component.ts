@@ -158,7 +158,7 @@ export class ConfigComponent
   }
 
   getDocsUrl(key: string) {
-    return `https://blog.cycc.eu.org/configuration/#${key}`
+    return `https://docs.paperless-ngx.com/configuration/#${key}`
   }
 
   public saveConfig() {
