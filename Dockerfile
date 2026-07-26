@@ -220,6 +220,12 @@ COPY --chown=1000:1000 ./src ./
 # copy frontend
 COPY --from=compile-frontend --chown=1000:1000 /src/src/documents/static/frontend/ ./documents/static/frontend/
 
+# ocr plugin
+COPY ./paperless_paddleocr_parser /tmp/plugin
+RUN set -eux \
+    && uv pip install --no-cache /tmp/plugin \
+    && rm -rf /tmp/plugin
+
 # add users, setup scripts
 # Mount the compiled frontend to expected location
 RUN set -eux \

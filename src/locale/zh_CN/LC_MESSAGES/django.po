@@ -1386,7 +1386,7 @@ msgstr "未找到文档：%(ids)s"
 
 #: documents/templates/account/account_inactive.html:5
 msgid "Paperless-ngx account inactive"
-msgstr "Paperless-ngx 账户未激活"
+msgstr "账户未激活"
 
 #: documents/templates/account/account_inactive.html:9
 msgid "Account inactive."
@@ -1414,7 +1414,7 @@ msgstr "感谢你使用 %(site_name)s!\n"
 
 #: documents/templates/account/login.html:5
 msgid "Paperless-ngx sign in"
-msgstr "Paperless-ngx 登录"
+msgstr "登录"
 
 #: documents/templates/account/login.html:10
 msgid "Please sign in."
@@ -1458,7 +1458,7 @@ msgstr "或者通过以下方式登录"
 
 #: documents/templates/account/password_reset.html:5
 msgid "Paperless-ngx reset password request"
-msgstr "Paperless-ngx密码重置请求"
+msgstr "密码重置请求"
 
 #: documents/templates/account/password_reset.html:9
 msgid "Enter your email address below, and we'll email instructions for setting a new one."
@@ -1474,7 +1474,7 @@ msgstr "向为发送说明"
 
 #: documents/templates/account/password_reset_done.html:5
 msgid "Paperless-ngx reset password sent"
-msgstr "Paperless-ngx密码重置发送"
+msgstr "密码重置发送"
 
 #: documents/templates/account/password_reset_done.html:9
 msgid "Check your inbox."
@@ -1486,7 +1486,7 @@ msgstr "我们已经通过电子邮件向你发送设置密码的说明。你应
 
 #: documents/templates/account/password_reset_from_key.html:5
 msgid "Paperless-ngx reset password confirmation"
-msgstr "Paperless-ngx密码重置确认"
+msgstr "密码重置确认"
 
 #: documents/templates/account/password_reset_from_key.html:9
 msgid "Set a new password."
@@ -1510,7 +1510,7 @@ msgstr "修改密码"
 
 #: documents/templates/account/password_reset_from_key_done.html:5
 msgid "Paperless-ngx reset password complete"
-msgstr "Paperless-ngx密码重置完成"
+msgstr "密码重置完成"
 
 #: documents/templates/account/password_reset_from_key_done.html:9
 msgid "Password reset complete."
@@ -1526,7 +1526,7 @@ msgstr "登录"
 
 #: documents/templates/account/signup.html:5
 msgid "Paperless-ngx sign up"
-msgstr "Paperless-ngx 注册"
+msgstr "注册"
 
 #: documents/templates/account/signup.html:11
 msgid "Already have an account?"
@@ -1547,7 +1547,7 @@ msgstr "密码 (再输入一次)"
 
 #: documents/templates/index.html:61
 msgid "Paperless-ngx is loading..."
-msgstr "Paperless-ngx 正在加载..."
+msgstr "系统正在加载..."
 
 #: documents/templates/index.html:62
 msgid "Still here?! Hmm, something might be wrong."
@@ -1559,7 +1559,7 @@ msgstr "这是与文档的链接。"
 
 #: documents/templates/mfa/authenticate.html:7
 msgid "Paperless-ngx Two-Factor Authentication"
-msgstr "Paperless-ngx 双重验证"
+msgstr "双重验证"
 
 #: documents/templates/mfa/authenticate.html:12
 msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
@@ -1584,7 +1584,7 @@ msgstr "分享链接已失效！"
 #: documents/templates/socialaccount/authentication_error.html:5
 #: documents/templates/socialaccount/login.html:5
 msgid "Paperless-ngx social account sign in"
-msgstr "Paperless-ngx 社交媒体账户登录"
+msgstr "社交媒体账户登录"
 
 #: documents/templates/socialaccount/authentication_error.html:10
 msgid "An error occurred while attempting to login via your social network account. Back to the"
@@ -1605,7 +1605,7 @@ msgstr "继续"
 
 #: documents/templates/socialaccount/signup.html:5
 msgid "Paperless-ngx social account sign up"
-msgstr "Paperless-ngx 社交媒体账户注册"
+msgstr "社交媒体账户注册"
 
 #: documents/templates/socialaccount/signup.html:11
 #, python-format
@@ -2070,7 +2070,7 @@ msgstr "繁体中文"
 
 #: paperless/urls.py:429
 msgid "Paperless-ngx administration"
-msgstr "Paperless-ngx 管理"
+msgstr "Cycc管理"
 
 #: paperless_mail/admin.py:39
 msgid "Authentication"
@@ -2086,7 +2086,7 @@ msgstr "过滤器"
 
 #: paperless_mail/admin.py:61
 msgid "Paperless will only process mails that match ALL of the filters given below."
-msgstr "Paperless-ngx 只会处理符合以下所有过滤规则的邮件。"
+msgstr "Cycc只会处理符合以下所有过滤规则的邮件。"
 
 #: paperless_mail/admin.py:78
 msgid "Actions"
@@ -2106,7 +2106,7 @@ msgstr "自动为通过此规则导入的文档分配元数据。如果您未在
 
 #: paperless_mail/apps.py:8
 msgid "Paperless mail"
-msgstr "Paperless-ngx 邮件"
+msgstr "邮件"
 
 #: paperless_mail/models.py:10
 msgid "mail account"

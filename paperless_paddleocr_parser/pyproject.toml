@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperless-paddleocr-parser"
+version = "0.1.0"
+description = "PaddleOCR HTTP API parser plugin for Paperless-ngx v3"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "PyMuPDF>=1.23.0",
+    "Pillow>=10.0.0"
+]
+
+[project.entry-points."paperless_ngx.parsers"]
+paddleocr = "paperless_paddleocr.parsers:PaddleOCRParser"

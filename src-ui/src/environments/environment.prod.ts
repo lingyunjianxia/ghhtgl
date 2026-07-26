@@ -1,6 +1,6 @@
 const base_url = new URL(document.baseURI)
 
-export const DEFAULT_APP_TITLE = 'Paperless-ngx'
+export const DEFAULT_APP_TITLE = 'Cycc'
 
 export const environment = {
   production: true,

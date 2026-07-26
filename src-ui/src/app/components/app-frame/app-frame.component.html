@@ -15,10 +15,10 @@
       @if (customAppTitle?.length) {
         <div class="d-flex flex-column align-items-start custom-title">
           <span class="title">{{customAppTitle}}</span>
-          <span class="byline text-uppercase font-monospace" i18n>by Paperless-ngx</span>
+          <span class="byline text-uppercase font-monospace" i18n>by Cycc</span>
         </div>
       } @else {
-        Paperless-ngx
+        cycc
       }
     </div>
   </a>
@@ -57,7 +57,7 @@
         </a>
         <div class="dropdown-divider"></div>
         <a ngbDropdownItem class="nav-link" target="_blank" rel="noopener noreferrer"
-          href="https://docs.paperless-ngx.com">
+          href="https://blog.cycc.eu.org">
           <i-bs class="me-2" name="question-circle"></i-bs><ng-container i18n>Documentation</ng-container>
         </a>
       </div>
@@ -314,7 +314,7 @@
             }
             <li class="nav-item mt-2" tourAnchor="tour.outro">
               <a class="px-3 py-2 text-muted small d-flex align-items-center flex-wrap text-decoration-none"
-                target="_blank" rel="noopener noreferrer" href="https://docs.paperless-ngx.com" ngbPopover="Documentation"
+                target="_blank" rel="noopener noreferrer" href="https://blog.cycc.eu.org" ngbPopover="Documentation"
                 i18n-ngbPopover [disablePopover]="!slimSidebarEnabled" placement="end" container="body"
                 triggers="mouseenter:mouseleave" popoverClass="popover-slim">
                 <i-bs class="d-flex me-2" name="question-circle"></i-bs><span><ng-container i18n>Documentation</ng-container></span>
@@ -324,13 +324,13 @@
               <div class="px-3 py-0 text-muted small d-flex align-items-center flex-wrap">
                 <div class="me-3">
                   <a class="text-muted text-decoration-none" target="_blank" rel="noopener noreferrer"
-                    href="https://github.com/paperless-ngx/paperless-ngx" ngbPopover="GitHub" i18n-ngbPopover
+                    href="https://blog.cycc.eu.org" ngbPopover="GitHub" i18n-ngbPopover
                     [disablePopover]="!slimSidebarEnabled" placement="end" container="body"
                     triggers="mouseenter:mouseleave" popoverClass="popover-slim">
                     {{ versionString }}
                   </a>
                 </div>
-                @if (!settingsService.updateCheckingIsSet || appRemoteVersion()) {
+                <!-- @if (!settingsService.updateCheckingIsSet || appRemoteVersion()) {
                   <div class="version-check">
                     <ng-template #updateAvailablePopContent>
                       <span class="small">Paperless-ngx {{ appRemoteVersion().version }} <ng-container i18n>is
@@ -370,7 +370,7 @@
                       </a>
                     }
                   </div>
-                }
+                }    -->
               </div>
             </li>
           </ul>
