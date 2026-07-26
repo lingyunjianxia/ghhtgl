@@ -221,9 +221,22 @@ COPY --chown=1000:1000 ./src ./
 COPY --from=compile-frontend --chown=1000:1000 /src/src/documents/static/frontend/ ./documents/static/frontend/
 
 # ocr plugin
+# 安装 Python 依赖
+COPY ./pyproject.toml ./pyproject.toml
+COPY ./uv.lock ./uv.lock
+
+RUN set -eux \
+    && uv venv \
+    && uv pip install --no-cache -r pyproject.toml
+
+# ★★★ 设置 PATH 以使用虚拟环境中的工具 ★★★
+ENV PATH="/usr/src/paperless/.venv/bin:$PATH"
+
+# ★★★ 安装插件 ★★★
 COPY ./paperless_paddleocr_parser /tmp/plugin
 RUN set -eux \
-    && uv pip install --no-cache /tmp/plugin \
+    && echo "=== Installing plugin ===" \
+    && pip install --no-deps --no-cache-dir /tmp/plugin \
     && rm -rf /tmp/plugin
 
 # add users, setup scripts
