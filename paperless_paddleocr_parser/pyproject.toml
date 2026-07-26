@@ -16,3 +16,6 @@ dependencies = [
 
 [project.entry-points."paperless_ngx.parsers"]
 paddleocr = "paperless_paddleocr.parsers:PaddleOCRParser"
+
+[tool.setuptools]
+packages = ["paperless_paddleocr"]
