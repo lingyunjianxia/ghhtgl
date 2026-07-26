@@ -223,7 +223,10 @@ COPY --from=compile-frontend --chown=1000:1000 /src/src/documents/static/fronten
 # ocr plugin
 COPY ./paperless_paddleocr_parser /tmp/plugin
 RUN set -eux \
-    && uv pip install --no-cache /tmp/plugin \
+    && ls -la /tmp/plugin \
+    && ls -la /tmp/plugin/paperless_paddleocr \
+    && . .venv/bin/activate \
+    && pip install --no-cache-dir /tmp/plugin \
     && rm -rf /tmp/plugin
 
 # add users, setup scripts
