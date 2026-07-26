@@ -9,6 +9,7 @@ __pycache__/
 .Python
 env/
 docs/
+.github/workflows/start/
 build/
 develop-eggs/
 dist/
