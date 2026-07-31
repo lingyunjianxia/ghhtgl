@@ -178,6 +178,7 @@ WORKDIR /usr/src/paperless/src/
 # Python dependencies
 # Change pretty frequently
 COPY --chown=1000:1000 ["pyproject.toml", "uv.lock", "/usr/src/paperless/src/"]
+COPY ./paperless_paddleocr_parser /tmp/plugin
 
 # Packages needed only for building a few quick Python
 # dependencies
@@ -199,6 +200,9 @@ RUN set -eux \
       --index https://download.pytorch.org/whl/cpu \
       --index-strategy unsafe-best-match \
       --requirements requirements.txt \
+&& echo "Installing custom PaddleOCR plugin" \
+&& pip install -i https://mirrors.aliyun.com/pypi/simple/ --timeout 100 /tmp/plugin \
+&& rm -rf /tmp/plugin \
   && echo "Installing NLTK data" \
     && python3 -W ignore::RuntimeWarning -m nltk.downloader -d "/usr/share/nltk_data" snowball_data \
     && python3 -W ignore::RuntimeWarning -m nltk.downloader -d "/usr/share/nltk_data" stopwords \
@@ -228,16 +232,6 @@ COPY ./uv.lock ./uv.lock
 RUN set -eux \
     && uv venv \
     && uv pip install --no-cache -r pyproject.toml
-
-# ★★★ 设置 PATH 以使用虚拟环境中的工具 ★★★
-ENV PATH="/usr/src/paperless/.venv/bin:$PATH"
-
-# ★★★ 安装插件 ★★★
-COPY ./paperless_paddleocr_parser /tmp/plugin
-RUN set -eux \
-    && echo "=== Installing plugin ===" \
-    && pip install --no-deps --no-cache-dir /tmp/plugin \
-    && rm -rf /tmp/plugin
 
 # add users, setup scripts
 # Mount the compiled frontend to expected location
