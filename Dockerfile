@@ -200,9 +200,9 @@ RUN set -eux \
       --index https://download.pytorch.org/whl/cpu \
       --index-strategy unsafe-best-match \
       --requirements requirements.txt \
-&& echo "Installing custom PaddleOCR plugin" \
-&& pip install -i https://mirrors.aliyun.com/pypi/simple/ --timeout 100 /tmp/plugin \
-&& rm -rf /tmp/plugin \
+  && echo "Installing custom plugin" \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple/ --timeout 100 /tmp/plugin \
+    && rm -rf /tmp/plugin \
   && echo "Installing NLTK data" \
     && python3 -W ignore::RuntimeWarning -m nltk.downloader -d "/usr/share/nltk_data" snowball_data \
     && python3 -W ignore::RuntimeWarning -m nltk.downloader -d "/usr/share/nltk_data" stopwords \
@@ -223,15 +223,6 @@ COPY --chown=1000:1000 ./src ./
 
 # copy frontend
 COPY --from=compile-frontend --chown=1000:1000 /src/src/documents/static/frontend/ ./documents/static/frontend/
-
-# ocr plugin
-# 安装 Python 依赖
-COPY ./pyproject.toml ./pyproject.toml
-COPY ./uv.lock ./uv.lock
-
-RUN set -eux \
-    && uv venv \
-    && uv pip install --no-cache -r pyproject.toml
 
 # add users, setup scripts
 # Mount the compiled frontend to expected location
