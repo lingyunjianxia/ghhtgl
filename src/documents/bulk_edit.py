@@ -387,7 +387,7 @@ def delete(doc_ids: list[int]) -> Literal["OK"]:
     except Exception as e:
         if "Data too long for column" in str(e):
             logger.warning(
-                "Detected a possible incompatible database column. See https://docs.paperless-ngx.com/troubleshooting/#convert-uuid-field",
+                "Detected a possible incompatible database column. See https://docs.cycc.eu.org/troubleshooting/#convert-uuid-field",
             )
         logger.error(f"Error deleting documents: {e!s}")
 

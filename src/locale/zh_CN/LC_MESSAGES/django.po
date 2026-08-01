@@ -1670,7 +1670,7 @@ msgstr "分享链接包不可用。"
 
 #: paperless/apps.py:11
 msgid "Paperless"
-msgstr "无纸版"
+msgstr "无纸化"
 
 #: paperless/models.py:26
 msgid "pdf"
@@ -1918,7 +1918,7 @@ msgstr "设置 LLM 超时时间（秒）"
 
 #: paperless/models.py:376
 msgid "paperless application settings"
-msgstr "paperless 应用设置"
+msgstr "系统应用设置"
 
 #: paperless/settings/__init__.py:556
 msgid "English (US)"

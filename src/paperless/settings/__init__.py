@@ -228,7 +228,7 @@ SPECTACULAR_SETTINGS = {
     "COMPONENT_SPLIT_REQUEST": True,
     "EXTERNAL_DOCS": {
         "description": "Paperless-ngx API Documentation",
-        "url": "https://docs.paperless-ngx.com/api/",
+        "url": "https://docs.cycc.eu.org/api/",
     },
     "ENUM_NAME_OVERRIDES": {
         "MatchingAlgorithm": "documents.models.MatchingModel.MATCHING_ALGORITHMS",
